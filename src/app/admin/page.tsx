@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getAdminSummary } from "@/lib/data";
 import { StatCard } from "@/components/ui/stat-card";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminPage() {
   const summary = await getAdminSummary().catch(() => ({
     quizCount: 0,

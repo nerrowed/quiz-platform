@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getPublishedQuizzes } from "@/lib/data";
 import { StatCard } from "@/components/ui/stat-card";
 
+export const dynamic = "force-dynamic";
+
 export default async function DashboardPage() {
   const quizzes = await getPublishedQuizzes().catch(() => []);
 

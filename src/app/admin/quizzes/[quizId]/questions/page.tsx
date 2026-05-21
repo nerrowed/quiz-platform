@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { createQuestionAction, publishQuizAction } from "./actions";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
   params: Promise<{ quizId: string }>;
 };
